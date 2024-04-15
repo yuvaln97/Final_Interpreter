@@ -1,0 +1,88 @@
+BNF
+
+Q1 + Q2 BNF: 
+
+<program> ::= <statement> (';' <statement>)*
+<statement> ::= <assignment> | <print>
+<assignment> ::= <variable> '=' <expression>
+<print> ::= 'print' <expression>
+<expression> ::= <term> (('+' | '-' | '*' | '/') <term>)*
+<term> ::= <integer> | <variable>
+<variable> ::= [a-zA-Z]+
+<integer> ::= [0-9]+
+ 
+
+Q3 BNF: 
+
+<program> ::= <statement> (';' <statement>)*
+<statement> ::= <assignment> | <print>
+<assignment> ::= <variable> '=' <expression>
+<print> ::= 'print' <expression>
+<expression> ::= <term> (('+' | '-' | '*' | '/') <term>)*
+<term> ::= <integer> | <variable>
+<variable> ::= [a-zA-Z]+
+<integer> ::= [0-9]+
+
+Q4: 
+
+The language is dynamically typed. We chose this type from several reasons: 
+
+Flexibility: Dynamically typed languages offer greater flexibility as variables can hold values of any type. 
+This can simplify programming tasks as developers do not need to explicitly declare variable types.
+
+Ease of Use: Dynamically typed languages often have simpler syntax and allow for quicker development. 
+Without the need for type declarations, writing and modifying code becomes more intuitive and less cumbersome.
+
+Rapid Prototyping: In the context of this project, where the goal is to define and implement a new scripting language,
+ using a dynamically typed language allows for rapid prototyping and experimentation.
+ Changes to the language design can be implemented more easily without the overhead of type annotations.
+
+Interpretation: Dynamically typed languages are commonly used in interpreted environments where code is executed line by line.
+ This aligns well with the interpreter-based approach we are taking in this project to execute the scripting language.
+
+
+Q5 BNF: 
+
+<program> ::= <statement> (';' <statement>)*
+<statement> ::= <assignment> | <print>
+<assignment> ::= <variable> '=' <expression>
+<print> ::= 'print' <expression>
+<expression> ::= <term> (('+' | '-' | '*' | '/') <term>)*
+<term> ::= <integer> | <variable> | <boolean_expr>
+<boolean_expr> ::= <expression> ('>' | '<' | '==') <expression>
+<variable> ::= [a-zA-Z]+
+<integer> ::= [0-9]+
+
+
+Q6 BNF (with if-then statements): 
+
+<program> ::= <statement> (';' <statement>)*
+<statement> ::= <assignment> | <print> | <if_statement>
+<assignment> ::= <variable> '=' <expression>
+<print> ::= 'print' <expression>
+<expression> ::= <term> (('+' | '-' | '*' | '/') <term>)*
+<term> ::= <integer> | <variable> | <boolean_expr>
+<boolean_expr> ::= <expression> ('>' | '<' | '==') <expression>
+<if_statement> ::= 'if' <boolean_expr> 'then' <program>
+<variable> ::= [a-zA-Z]+
+<integer> ::= [0-9]+
+
+Q7 BNF  (with while loops): 
+
+<program> ::= <statement> (';' <statement>)*
+<statement> ::= <assignment> | <print> | <if_statement> | <while_loop>
+<assignment> ::= <variable> '=' <expression>
+<print> ::= 'print' <expression>
+<expression> ::= <term> (('+' | '-' | '*' | '/') <term>)*
+<term> ::= <integer> | <variable> | <boolean_expr>
+<boolean_expr> ::= <expression> ('>' | '<' | '==') <expression>
+<if_statement> ::= 'if' <boolean_expr> 'then' <program>
+<while_loop> ::= 'while' <boolean_expr> 'do' <program> 'end'
+<variable> ::= [a-zA-Z]+
+<integer> ::= [0-9]+
+
+
+
+
+
+
