@@ -318,9 +318,13 @@ if __name__ == "__main__":
             code = input(">> ")
             if code == "exit":
                 break
-            output = interpreter.interpret(code)
-            if output is not None:
-                print(output)
+            if len(code) > 1000:
+                print("can't process code long than 1000 words")
+            else:
+
+                output = interpreter.interpret(code)
+                if output is not None:
+                    print(output)
         print("Thank you for using our cool interpreter!")
 
     except KeyboardInterrupt:
