@@ -96,6 +96,10 @@ class ScriptInterpreter:
                     elif if_num == 1:
                         condition = parts[0][3:].strip()  # grabbing the condition
                         expr_if = parts[1]
+                        if 'print' in expr_if:
+                            exec(expr_if)
+                        else:
+                            return expr_if
                     else:  # 2 to 3 conditions
                         for index in range(if_num):
                             current_condition = parts[index][3:].strip()
